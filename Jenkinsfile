@@ -47,8 +47,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                docker rm -f myapp || true
-                docker run -d --name myapp -p 3000:8080 $DOCKER_IMAGE:latest
+                docker rm -f dummy-node-app|| true
+                docker run -d --name dummy-node-app -p 3000:8080 $DOCKER_IMAGE:latest
                 '''
             }
         }
