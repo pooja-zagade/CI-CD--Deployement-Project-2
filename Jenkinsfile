@@ -43,6 +43,16 @@ pipeline {
             }
         }
 
+
+        stage('Deploy') {
+            steps {
+                sh '''
+                docker rm -f myapp || true
+                docker run -d --name myapp -p 3000:8080 $DOCKER_IMAGE:latest
+                '''
+            }
+        }
+
         /*  Added inside stages */
         stage('Show App Output') {
             steps {
@@ -52,6 +62,7 @@ pipeline {
             }
         }
     }
+    
 
     post {
         success {
