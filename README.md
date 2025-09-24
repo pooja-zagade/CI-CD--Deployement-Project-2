@@ -1,22 +1,21 @@
-# Node.js + Docker + Jenkins CI/CD
+# CI/CD Pipeline 
 
-This project demonstrates a basic CI/CD pipeline using Jenkins, Docker, and Node.js.  
-Whenever code is pushed to GitHub, Jenkins automatically builds a Docker image and pushes it to Docker Hub
+A simple Node.js application deployed via Docker with a fully automated Jenkins CI/CD pipeline
 
-## Project Overview
-- Application: Node.js script that prints output to the console.
-- Docker: Containerizes the app using a `Dockerfile`.
-- Jenkins: Automates build, test, and deployment.
-- Docker Hub: Stores the Docker image (`pooja8282/dummy-node-app`).
+## Features
 
-# Pipeline Steps
-1. Checkout code from GitHub.
-2. Install Node.js dependencies.
-3. Run tests (if any).
-4. Build Docker image.
-5. Push image to Docker Hub.
-6. Show Node.js console output in Jenkins logs.
+1. Code checkout from GitHub
+2. Installing dependencies
+3. Running tests
+4. Building a Docker image
+5. Pushing the image to DockerHub
+6. Deploying the app in a Docker container
 
+## Technology Stack
 
+- Node.js
+- Docker
+- Jenkins
+- DockerHub
 
 
